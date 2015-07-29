@@ -1,0 +1,33 @@
+{
+  "name": "yarr",
+  "version": "1.0.0",
+  "description": "yet another RSS reader",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.build.js",
+    "start": "webpack-dev-server --config webpack.dev.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^5.6.15",
+    "babel-eslint": "^3.1.20",
+    "babel-loader": "^5.2.2",
+    "css-loader": "^0.15.1",
+    "dexie": "^1.1.0",
+    "eslint": "^0.24.0",
+    "eslint-loader": "^0.14.1",
+    "eslint-plugin-react": "^2.6.3",
+    "html-webpack-plugin": "^1.5.2",
+    "html2hscript": "^1.0.6",
+    "node-libs-browser": "^0.5.2",
+    "rx": "^2.5.3",
+    "style-loader": "^0.12.3",
+    "virtual-dom": "^2.1.0",
+    "virtual-dom-loader": "^0.1.0",
+    "webpack": "^1.10.0",
+    "webpack-dev-server": "^1.10.1",
+    "webpack-merge": "^0.1.1"
+  }
+}
