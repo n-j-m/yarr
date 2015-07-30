@@ -1,8 +1,10 @@
-import { Observable } from "rx";
-import { h, diff, patch } from "virtual-dom";
-import createElement from "virtual-dom/create-element";
+import Rx from "rx";
 
-import app from "./app";
+Rx.config.longStackSupport = true;
+
+require("./styles/style.scss");
+
+import app from "./components/app";
 import render from "./renderer";
 
 render(app(), document.getElementById("app"));
