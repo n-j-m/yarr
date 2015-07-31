@@ -23,5 +23,10 @@ export function formatDate(date) {
     monthIndex = date.getMonth(),
     year = date.getFullYear();
 
-  return `${day}, ${monthIndex[monthIndex]}, ${year}`;
+  return `${day}, ${monthNames[monthIndex]}, ${year}`;
+}
+
+export function log(thing) {
+  console.log(thing);
+  return thing;
 }

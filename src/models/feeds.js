@@ -14,9 +14,9 @@ function fetchFeed(url) {
   }).promise();
 }
 
-export function feeds() {
-  return Observable
-    .from(feedUrls)
-    .flatMap(fetchFeed)
-    .map(res => res.responseData.feed.entries);
-}
+let feeds$ = Observable
+  .from(feedUrls)
+  .flatMap(fetchFeed)
+  .map(res => res.responseData.feed);
+
+export default { feeds$ };
