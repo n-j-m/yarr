@@ -1,6 +1,14 @@
-import { feeds$ } from "./feeds";
+import { Observable } from "rx";
 
-let posts$ = feeds$
-  .map(feed => feed.entries);
+import { Posts, reactiveTable } from "../db";
+
+let posts$ = Observable
+  .merge(
+    reactiveTable(Posts, "creating"),
+    reactiveTable(Posts, "updating"),
+    reactiveTable(Posts, "deleting")
+  )
+  .startWith("")
+  .flatMap(() => Posts.orderBy("publishedDate").reverse().toArray());
 
 export default { posts$ };

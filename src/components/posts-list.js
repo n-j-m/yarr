@@ -54,6 +54,6 @@ function view(posts) {
 export default function render() {
   return posts$
     .map(posts => posts.map(postView))
-    .reduce((acc, posts) => acc.concat(posts))
-    .map(view);
+    .map(view)
+    .startWith(view());
 }

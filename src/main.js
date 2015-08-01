@@ -1,5 +1,7 @@
 import Rx from "rx";
 
+import DB from "./db";
+
 Rx.config.longStackSupport = true;
 
 require("./styles/style.scss");
